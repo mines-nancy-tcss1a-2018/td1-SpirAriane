@@ -24,7 +24,9 @@ def Solutions(l): #l = liste des n lettres (8 ou moins)
                     Compte += 1
             if Compte == nMot:
                 Possibles.append(MotStr)
-    #Détermination du mot le plus long de la liste
+    return Possibles
+
+def Solutions(Possibles):
     if len(Possibles) == 0:
         return "Aucune solution"
     else :
@@ -32,7 +34,7 @@ def Solutions(l): #l = liste des n lettres (8 ou moins)
         for Mot in Possibles :
             if len(Mot) > len(Meilleur) :
                 Meilleur = Mot
-    return Meilleur, Possibles
+    return Meilleur
 
 
 
