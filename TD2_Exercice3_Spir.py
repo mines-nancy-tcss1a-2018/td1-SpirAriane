@@ -1,24 +1,8 @@
 def score(mot):
-    Liste_1 = ['a','e','i','l','n','o','r','s','t','u']
-    Liste_2 = ['d','g','m']
-    Liste_3 = ['b','c','p']
-    Liste_4 = ['f','h','v']
-    Liste_8 = ['j','q']
-    Liste_10 = ['k','w','x','y','z']
+    points = {'a':1,'b':3,'c':3,'d':2,'e':1,'f':4,'g':2,'h':4,'i':1,'j':8,'k':10,'l':1,'m',2,'n':1,'o':1,'p':3,'q':8,'r':1,'s':1,'t':1,'u':1,'v':4,'w':10,'x':10,'y':10,'z':10}
     Score = 0
     for Lettre in mot:
-        if Lettre in Liste_1 :
-            Score += 1
-        elif Lettre in Liste_2 :
-            Score += 2
-        elif Lettre in Liste_3 :
-            Score += 3
-        elif Lettre in Liste_4 :
-            Score += 4
-        elif Lettre in Liste_8 :
-            Score += 8
-        elif Lettre in Liste_10 :
-            Score += 10
+        Score += points[Lettre]
     return Score
 
 
