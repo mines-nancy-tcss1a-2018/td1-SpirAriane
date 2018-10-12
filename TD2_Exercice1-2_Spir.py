@@ -11,9 +11,8 @@ def Solutions(l): #l = liste des n lettres (8 ou moins)
     n = len(l)
     #Détermination de la liste des possibilités
     Possibles = []
-    for MotStr in Lexique :
+    for Mot in Lexique :
         Tirage = l[:] #On fait une copie du tirage
-        Mot = list(MotStr)
         nMot = len(Mot)
 
         if nMot <= n : #On vérifie que le mot est assez court
@@ -23,7 +22,7 @@ def Solutions(l): #l = liste des n lettres (8 ou moins)
                     Tirage.remove(Lettre)
                     Compte += 1
             if Compte == nMot:
-                Possibles.append(MotStr)
+                Possibles.append(Mot)
     return Possibles
 
 def Solutions(Possibles):
